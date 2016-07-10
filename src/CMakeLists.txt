@@ -12,13 +12,8 @@ endif()
  
 ########################################################
 # source files
-file(GLOB project_SRCS *.cpp ${CMAKE_CURRENT_SOURCE_DIR}/../include/${TARGET}/*.h)
+file(GLOB SOURCES *.cpp ${CMAKE_CURRENT_SOURCE_DIR}/../include/universal_handler_map/*.h)
   
-########################################################
-# source files
-set(SOURCES ${SOURCES} ${Files_src})
-source_group("Sources" FILES ${SOURCES})
- 
  
 ########################################################
 # include directories

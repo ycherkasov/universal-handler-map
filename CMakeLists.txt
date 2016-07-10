@@ -40,6 +40,4 @@ elseif(${WIN32})
 endif()
 
 add_subdirectory(src)
-#add_subdirectory(tests/func_tests)
-#add_subdirectory(tests/load_tests)
-#add_subdirectory(tests/perf_tests)
+add_subdirectory(test/func_tests)
