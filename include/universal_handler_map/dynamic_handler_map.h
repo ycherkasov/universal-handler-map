@@ -86,7 +86,8 @@ public:
     /// @brief Empty handlers map
     HandlerMap()
     {
-        static_assert(IsCallable<Handler>::value, "Second template param should be callable");
+        static_assert(IsCallable<Handler>::value, 
+            "Second HandlerMap<> template param should be callable");
     }
 
     /// @brief Initialize handlers map with {}-notation
@@ -131,7 +132,7 @@ public:
         return callback(std::forward<Args>(args)...);
     }
 
-    /// @brief Sometimes we have to deal with fixed nimber of handlers
+    /// @brief Sometimes we have to deal with fixed number of handlers
     /// This method provide us simple runtime-check
     [[noreturn]] 
     void throw_if_unexpected(size_t s)
